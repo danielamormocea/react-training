@@ -39,6 +39,7 @@ export const HomePage = ({
     (id) => () => push(`/movie/${id}`),
     [push],
   );
+
   return (
     <>
       <Container

@@ -3,13 +3,16 @@ import DarkThemeIcon from 'mdi-react/Brightness4Icon';
 import { useTheme } from '../contexts/theme';
 import { Button } from './Button';
 
-export const ThemeToggleButton = () => {
+export const ThemeToggleButton = ({
+  className,
+  iconClassName,
+}) => {
   const { isLight, toggleTheme } = useTheme();
   return (
-    <Button onClick={toggleTheme}>
+    <Button className={className} onClick={toggleTheme}>
       {isLight
-        ? <DarkThemeIcon />
-        : <LightThemeIcon />}
+        ? <DarkThemeIcon className={iconClassName} />
+        : <LightThemeIcon className={iconClassName} />}
     </Button>
   );
 };
